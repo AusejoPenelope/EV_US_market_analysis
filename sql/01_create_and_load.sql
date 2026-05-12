@@ -19,6 +19,7 @@ CREATE TABLE vehicle_data (
     unknown_fuel INT
 );
 
+-- Insert data
 INSERT INTO vehicle_data VALUES
 ('Alabama', 13000, 5800, 63300, 54200, 441200, 100, 100, 0, 0, 4102200, 127000, 29000),
 ('Alaska', 2700, 900, 10600, 9600, 46800, 0, 0, 0, 0, 454300, 29800, 5100),
