@@ -1,6 +1,6 @@
-state,ev,ev_pct
-California,1256600,3.41
-Florida,254900,1.37
-"New York",131300,1.16
-Illinois,99600,0.99
-Texas,230100,0.89
+state;ev;ev_pct
+California;1256600;3,41
+Florida;254900;1,37
+New York;131300;1,16
+Illinois;99600;0,99
+Texas;230100;0,89

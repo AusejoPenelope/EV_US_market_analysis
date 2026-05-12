@@ -1,4 +1,4 @@
-state,ev,gasoline,ev_pct,gasoline_pct
-Florida,254900,16136500,1.37,86.83
-Texas,230100,21392800,0.89,82.93
-"New York",131300,9905500,1.16,87.52
+state;ev;gasoline;ev_pct;gasoline_pct
+Florida;254900;16136500;1,37;86,83
+Texas;230100;21392800;0,89;82,93
+New York;131300;9905500;1,16;87,52
