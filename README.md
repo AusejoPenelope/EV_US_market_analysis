@@ -19,7 +19,7 @@ to traditional fuels, and what insights can be drawn for policymakers and automa
 - **GitHub**: Project hosting
 
 ## 📊 Dashboard
-👉 [View the Interactive Dashboard on Tableau Public] https://public.tableau.com/views/USEVMarketShareDashboard/Recommendations
+👉 [View the Interactive Dashboard on Tableau Public]https://public.tableau.com/views/USEVMarketShareDashboard/Recommendations
 
 The dashboard consists of 3 sections:
 - **Dashboard 1**: National EV adoption map + Top 5 vs Bottom 5 states + Large states comparison
