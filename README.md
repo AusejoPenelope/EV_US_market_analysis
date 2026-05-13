@@ -12,10 +12,11 @@ to traditional fuels, and what insights can be drawn for policymakers and automa
 - Which alternative fuels are significant vs. niche?
 - Where should policymakers prioritize EV infrastructure investment?
 
-## 🛠️ Tech Stack
+## 🛠️ Tools used
 - **Excel** — Data cleaning and preparation
 - **MySQL** — Data analysis and queries
 - **Tableau Public** — Dashboard and visualizations
+- **GitHub** — Project hosting
 
 ## 📊 Dashboard
 👉 [View the Interactive Dashboard on Tableau Public] https://public.tableau.com/views/USEVMarketShareDashboard/Recommendations
