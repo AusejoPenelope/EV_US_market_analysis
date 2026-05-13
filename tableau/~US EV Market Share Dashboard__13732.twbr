@@ -1,0 +1,2346 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0410.0924                               -->
+<workbook original-version='18.1' source-build='2026.1.1 (20261.26.0410.0924)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='USEVMarketShareDashboard' path='/workbooks' revision='1.1' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='large_states_comparison (ev_dashboard_data_1) (copy)' inline='true' name='federated.0a7c2b71bmvdmr13hbs751ma1ags (copy)' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='ev_dashboard_data_1' name='excel-direct.1qcqsoh1c1gqyc1ftqkm60rs4teh (copy)'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/penel/Documents/Data analyst course - Alex Freberg/EV_US_market_analysis/data_viz/ev_dashboard_data_1.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.1qcqsoh1c1gqyc1ftqkm60rs4teh (copy)' name='large_states_comparison' table='[large_states_comparison$]' type='table'>
+          <columns gridOrigin='A1:C6:no:A1:C6:0' header='yes' outcome='6'>
+            <column datatype='string' name='state' ordinal='0' />
+            <column datatype='integer' name='ev' ordinal='1' />
+            <column datatype='real' name='ev_pct' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[large_states_comparison]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C6:no:A1:C6:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[state]</local-name>
+            <parent-name>[large_states_comparison]</parent-name>
+            <remote-alias>state</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[large!states!comparison_32D3744CD5894285866BCCA0F6968689]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ev</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ev]</local-name>
+            <parent-name>[large_states_comparison]</parent-name>
+            <remote-alias>ev</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[large!states!comparison_32D3744CD5894285866BCCA0F6968689]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ev_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ev_pct]</local-name>
+            <parent-name>[large_states_comparison]</parent-name>
+            <remote-alias>ev_pct</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[large!states!comparison_32D3744CD5894285866BCCA0F6968689]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='large_states_comparison' datatype='table' name='[__tableau_internal_object_id__].[large!states!comparison_32D3744CD5894285866BCCA0F6968689]' role='measure' type='quantitative' />
+      <column caption='Ev' datatype='integer' name='[ev]' role='measure' type='quantitative' />
+      <column caption='Ev Pct' datatype='real' name='[ev_pct]' role='measure' type='quantitative' />
+      <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/penel/AppData/Local/Temp/TableauTemp/#TableauTemp_1a9emcp0th9vzr11x4k5x0u2sue5 copy 1.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>state</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[state]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>state</remote-alias>
+              <ordinal>0</ordinal>
+              <family>large_states_comparison</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RES_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ev</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ev]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ev</remote-alias>
+              <ordinal>1</ordinal>
+              <family>large_states_comparison</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ev_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[ev_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ev_pct</remote-alias>
+              <ordinal>2</ordinal>
+              <family>large_states_comparison</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:state:nk]' palette='blue_10_0' type='palette'>
+            <map to='#2c5985'>
+              <bucket>&quot;California&quot;</bucket>
+            </map>
+            <map to='#358ead'>
+              <bucket>&quot;Florida&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Maryland&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;New Mexico&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Wyoming&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Nebraska&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Arkansas&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Nevada&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;New Hampshire&quot;</bucket>
+            </map>
+            <map to='#59acbe'>
+              <bucket>&quot;New York&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Alaska&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Vermont&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Arizona&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Mississippi&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Oklahoma&quot;</bucket>
+            </map>
+            <map to='#89c8cc'>
+              <bucket>&quot;Illinois&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Louisiana&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;New Jersey&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Pennsylvania&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Georgia&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Indiana&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;District of Columbia&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Iowa&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;North Carolina&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Connecticut&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Idaho&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Maine&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Oregon&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;South Dakota&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Missouri&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Utah&quot;</bucket>
+            </map>
+            <map to='#bce4d8'>
+              <bucket>&quot;Texas&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Montana&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Kansas&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Delaware&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;South Carolina&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;North Dakota&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Tennessee&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Colorado&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Michigan&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;West Virginia&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Hawaii&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Kentucky&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Rhode Island&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Virginia&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Wisconsin&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Massachusetts&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Ohio&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Alabama&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Minnesota&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Washington&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Spain&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='large_states_comparison' id='large!states!comparison_32D3744CD5894285866BCCA0F6968689'>
+            <properties context=''>
+              <relation connection='excel-direct.1qcqsoh1c1gqyc1ftqkm60rs4teh (copy)' name='large_states_comparison' table='[large_states_comparison$]' type='table'>
+                <columns gridOrigin='A1:C6:no:A1:C6:0' header='yes' outcome='6'>
+                  <column datatype='string' name='state' ordinal='0' />
+                  <column datatype='integer' name='ev' ordinal='1' />
+                  <column datatype='real' name='ev_pct' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='recommendations (ev_dashboard_data_1)' inline='true' name='federated.0su5e9w0rssmyq16yxnmy029v8v9' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='ev_dashboard_data_1' name='excel-direct.0mwgsgc1pa9qo812uqiby1a1ii11'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/penel/Documents/Data analyst course - Alex Freberg/EV_US_market_analysis/data_viz/ev_dashboard_data_1.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0mwgsgc1pa9qo812uqiby1a1ii11' name='recommendations' table='[recommendations$]' type='table'>
+          <columns gridOrigin='A1:E4:no:A1:E4:0' header='yes' outcome='6'>
+            <column datatype='string' name='state' ordinal='0' />
+            <column datatype='integer' name='ev' ordinal='1' />
+            <column datatype='integer' name='gasoline' ordinal='2' />
+            <column datatype='real' name='ev_pct' ordinal='3' />
+            <column datatype='real' name='gasoline_pct' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[recommendations]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:E4:no:A1:E4:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[state]</local-name>
+            <parent-name>[recommendations]</parent-name>
+            <remote-alias>state</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[recommendations_790D7B539EA14E65940A94C74251892C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ev</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ev]</local-name>
+            <parent-name>[recommendations]</parent-name>
+            <remote-alias>ev</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[recommendations_790D7B539EA14E65940A94C74251892C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gasoline</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[gasoline]</local-name>
+            <parent-name>[recommendations]</parent-name>
+            <remote-alias>gasoline</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[recommendations_790D7B539EA14E65940A94C74251892C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ev_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ev_pct]</local-name>
+            <parent-name>[recommendations]</parent-name>
+            <remote-alias>ev_pct</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[recommendations_790D7B539EA14E65940A94C74251892C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gasoline_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gasoline_pct]</local-name>
+            <parent-name>[recommendations]</parent-name>
+            <remote-alias>gasoline_pct</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[recommendations_790D7B539EA14E65940A94C74251892C]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='recommendations' datatype='table' name='[__tableau_internal_object_id__].[recommendations_790D7B539EA14E65940A94C74251892C]' role='measure' type='quantitative' />
+      <column caption='Ev' datatype='integer' name='[ev]' role='measure' type='quantitative' />
+      <column caption='Ev Pct' datatype='real' name='[ev_pct]' role='measure' type='quantitative' />
+      <column caption='Gasoline' datatype='integer' name='[gasoline]' role='measure' type='quantitative' />
+      <column caption='Gasoline Pct' datatype='real' name='[gasoline_pct]' role='measure' type='quantitative' />
+      <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+      <column-instance column='[ev]' derivation='Sum' name='[sum:ev:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[ev_pct]' derivation='Sum' name='[sum:ev_pct:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/penel/AppData/Local/Temp/TableauTemp/#TableauTemp_1aahoy91s413vf15iapxf1yd1ta0.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>state</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[state]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>state</remote-alias>
+              <ordinal>0</ordinal>
+              <family>recommendations</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RES_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ev</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ev]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ev</remote-alias>
+              <ordinal>1</ordinal>
+              <family>recommendations</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gasoline</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[gasoline]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gasoline</remote-alias>
+              <ordinal>2</ordinal>
+              <family>recommendations</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ev_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[ev_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ev_pct</remote-alias>
+              <ordinal>3</ordinal>
+              <family>recommendations</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gasoline_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[gasoline_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gasoline_pct</remote-alias>
+              <ordinal>4</ordinal>
+              <family>recommendations</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:state:nk]' palette='blue_10_0' type='palette'>
+            <map to='#2c5985'>
+              <bucket>&quot;California&quot;</bucket>
+            </map>
+            <map to='#358ead'>
+              <bucket>&quot;Florida&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Maryland&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;New Mexico&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Wyoming&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Nebraska&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Arkansas&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Nevada&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;New Hampshire&quot;</bucket>
+            </map>
+            <map to='#59acbe'>
+              <bucket>&quot;New York&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Alaska&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Vermont&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Arizona&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Mississippi&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Oklahoma&quot;</bucket>
+            </map>
+            <map to='#89c8cc'>
+              <bucket>&quot;Illinois&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Louisiana&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;New Jersey&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Pennsylvania&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Georgia&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Indiana&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;District of Columbia&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Iowa&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;North Carolina&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Connecticut&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Idaho&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Maine&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Oregon&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;South Dakota&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Missouri&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Utah&quot;</bucket>
+            </map>
+            <map to='#bce4d8'>
+              <bucket>&quot;Texas&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Montana&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Kansas&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Delaware&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;South Carolina&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;North Dakota&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Tennessee&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Colorado&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Michigan&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;West Virginia&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Hawaii&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Kentucky&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Rhode Island&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Virginia&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Wisconsin&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Massachusetts&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Ohio&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Alabama&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Minnesota&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Washington&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0su5e9w0rssmyq16yxnmy029v8v9].[sum:ev:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0su5e9w0rssmyq16yxnmy029v8v9].[sum:ev_pct:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Spain&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='recommendations' id='recommendations_790D7B539EA14E65940A94C74251892C'>
+            <properties context=''>
+              <relation connection='excel-direct.0mwgsgc1pa9qo812uqiby1a1ii11' name='recommendations' table='[recommendations$]' type='table'>
+                <columns gridOrigin='A1:E4:no:A1:E4:0' header='yes' outcome='6'>
+                  <column datatype='string' name='state' ordinal='0' />
+                  <column datatype='integer' name='ev' ordinal='1' />
+                  <column datatype='integer' name='gasoline' ordinal='2' />
+                  <column datatype='real' name='ev_pct' ordinal='3' />
+                  <column datatype='real' name='gasoline_pct' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='top_bottom_5_states (ev_dashboard_data_1)' inline='true' name='federated.1vf49461eyw52z1ax58xv1bvc5eu' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='ev_dashboard_data_1' name='excel-direct.0oy2zhi1fr6ir81a4p56i170h7sx'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/penel/Documents/Data analyst course - Alex Freberg/EV_US_market_analysis/data_viz/ev_dashboard_data_1.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0oy2zhi1fr6ir81a4p56i170h7sx' name='top_bottom_5_states' table='[top_bottom_5_states$]' type='table'>
+          <columns gridOrigin='A1:D11:no:A1:D11:0' header='yes' outcome='6'>
+            <column datatype='string' name='state' ordinal='0' />
+            <column datatype='integer' name='ev' ordinal='1' />
+            <column datatype='real' name='ev_pct' ordinal='2' />
+            <column datatype='string' name='group' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[top_bottom_5_states]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D11:no:A1:D11:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[state]</local-name>
+            <parent-name>[top_bottom_5_states]</parent-name>
+            <remote-alias>state</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[top!bottom!5!states_A44ADC2C97824D119496D4DE8CC0CCD5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ev</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ev]</local-name>
+            <parent-name>[top_bottom_5_states]</parent-name>
+            <remote-alias>ev</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[top!bottom!5!states_A44ADC2C97824D119496D4DE8CC0CCD5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ev_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ev_pct]</local-name>
+            <parent-name>[top_bottom_5_states]</parent-name>
+            <remote-alias>ev_pct</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[top!bottom!5!states_A44ADC2C97824D119496D4DE8CC0CCD5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>group</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[group]</local-name>
+            <parent-name>[top_bottom_5_states]</parent-name>
+            <remote-alias>group</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[top!bottom!5!states_A44ADC2C97824D119496D4DE8CC0CCD5]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='top_bottom_5_states' datatype='table' name='[__tableau_internal_object_id__].[top!bottom!5!states_A44ADC2C97824D119496D4DE8CC0CCD5]' role='measure' type='quantitative' />
+      <column caption='Ev' datatype='integer' name='[ev]' role='measure' type='quantitative' />
+      <column caption='Ev Pct' datatype='real' name='[ev_pct]' role='measure' type='quantitative' />
+      <column caption='Group' datatype='string' name='[group]' role='dimension' type='nominal' />
+      <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column-instance column='[group]' derivation='None' name='[none:group:nk]' pivot='key' type='nominal' />
+      <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/penel/AppData/Local/Temp/TableauTemp/#TableauTemp_01935vj0yoln2f13iw3i60lj3p2k.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>state</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[state]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>state</remote-alias>
+              <ordinal>0</ordinal>
+              <family>top_bottom_5_states</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RES_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ev</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ev]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ev</remote-alias>
+              <ordinal>1</ordinal>
+              <family>top_bottom_5_states</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ev_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[ev_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ev_pct</remote-alias>
+              <ordinal>2</ordinal>
+              <family>top_bottom_5_states</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>group</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[group]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>group</remote-alias>
+              <ordinal>3</ordinal>
+              <family>top_bottom_5_states</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RES_S2' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:group:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Top 5&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>%many-values%</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Bottom 5&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:state:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Maryland&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;New Mexico&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Wyoming&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;California&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Nebraska&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Texas&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Arkansas&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Nevada&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;New Hampshire&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Alaska&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Vermont&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Arizona&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Mississippi&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Oklahoma&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Louisiana&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;New Jersey&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Pennsylvania&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Georgia&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Indiana&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;District of Columbia&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Iowa&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;North Carolina&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Connecticut&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Idaho&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Maine&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Oregon&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;South Dakota&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Missouri&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Utah&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Montana&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;New York&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Illinois&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Kansas&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Delaware&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;South Carolina&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Florida&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;North Dakota&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Tennessee&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Colorado&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Michigan&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;West Virginia&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Hawaii&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Kentucky&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Rhode Island&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Virginia&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Wisconsin&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Massachusetts&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Ohio&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Alabama&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Minnesota&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Washington&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Spain&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='top_bottom_5_states' id='top!bottom!5!states_A44ADC2C97824D119496D4DE8CC0CCD5'>
+            <properties context=''>
+              <relation connection='excel-direct.0oy2zhi1fr6ir81a4p56i170h7sx' name='top_bottom_5_states' table='[top_bottom_5_states$]' type='table'>
+                <columns gridOrigin='A1:D11:no:A1:D11:0' header='yes' outcome='6'>
+                  <column datatype='string' name='state' ordinal='0' />
+                  <column datatype='integer' name='ev' ordinal='1' />
+                  <column datatype='real' name='ev_pct' ordinal='2' />
+                  <column datatype='string' name='group' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='market_share' inline='true' name='federated.1xux7um13vf7p411v9sb40c13br8' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='ev_dashboard_data_1' name='excel-direct.1qin7w906a060014djutg09ibsbm'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/penel/Documents/Data analyst course - Alex Freberg/EV_US_market_analysis/data_viz/ev_dashboard_data_1.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.1qin7w906a060014djutg09ibsbm' name='market_share' table='[market_share$]' type='table'>
+          <columns gridOrigin='A1:E52:no:A1:E52:0' header='yes' outcome='6'>
+            <column datatype='string' name='state' ordinal='0' />
+            <column datatype='real' name='ev_pct' ordinal='1' />
+            <column datatype='real' name='phev_pct' ordinal='2' />
+            <column datatype='real' name='hev_pct' ordinal='3' />
+            <column datatype='real' name='gasoline_pct' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[market_share]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:E52:no:A1:E52:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[state]</local-name>
+            <parent-name>[market_share]</parent-name>
+            <remote-alias>state</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[market!share_72987893891F4A37A1C9893646E10167]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ev_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ev_pct]</local-name>
+            <parent-name>[market_share]</parent-name>
+            <remote-alias>ev_pct</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[market!share_72987893891F4A37A1C9893646E10167]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>phev_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[phev_pct]</local-name>
+            <parent-name>[market_share]</parent-name>
+            <remote-alias>phev_pct</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[market!share_72987893891F4A37A1C9893646E10167]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hev_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[hev_pct]</local-name>
+            <parent-name>[market_share]</parent-name>
+            <remote-alias>hev_pct</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[market!share_72987893891F4A37A1C9893646E10167]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gasoline_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gasoline_pct]</local-name>
+            <parent-name>[market_share]</parent-name>
+            <remote-alias>gasoline_pct</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[market!share_72987893891F4A37A1C9893646E10167]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='market_share' datatype='table' name='[__tableau_internal_object_id__].[market!share_72987893891F4A37A1C9893646E10167]' role='measure' type='quantitative' />
+      <column caption='Ev Pct' datatype='real' name='[ev_pct]' role='measure' type='quantitative' />
+      <column caption='Gasoline Pct' datatype='real' name='[gasoline_pct]' role='measure' type='quantitative' />
+      <column caption='Hev Pct' datatype='real' name='[hev_pct]' role='measure' type='quantitative' />
+      <column caption='Phev Pct' datatype='real' name='[phev_pct]' role='measure' type='quantitative' />
+      <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+      <column-instance column='[ev_pct]' derivation='Sum' name='[sum:ev_pct:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[gasoline_pct]' derivation='Sum' name='[sum:gasoline_pct:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[hev_pct]' derivation='Sum' name='[sum:hev_pct:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[phev_pct]' derivation='Sum' name='[sum:phev_pct:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/penel/AppData/Local/Temp/TableauTemp/#TableauTemp_0cnacn71ljytua12vcwdo1mgr1xv.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>state</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[state]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>state</remote-alias>
+              <ordinal>0</ordinal>
+              <family>market_share</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RES_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ev_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[ev_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ev_pct</remote-alias>
+              <ordinal>1</ordinal>
+              <family>market_share</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>43</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>phev_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[phev_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>phev_pct</remote-alias>
+              <ordinal>2</ordinal>
+              <family>market_share</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>37</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hev_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[hev_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>hev_pct</remote-alias>
+              <ordinal>3</ordinal>
+              <family>market_share</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gasoline_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[gasoline_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gasoline_pct</remote-alias>
+              <ordinal>4</ordinal>
+              <family>market_share</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>49</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:state:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Maryland&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;New Mexico&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Wyoming&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;California&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Nebraska&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Texas&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Arkansas&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Nevada&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;New Hampshire&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Alaska&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Vermont&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Arizona&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Mississippi&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Oklahoma&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Louisiana&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;New Jersey&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Pennsylvania&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Georgia&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Indiana&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;District of Columbia&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Iowa&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;North Carolina&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Connecticut&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Idaho&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Maine&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Oregon&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;South Dakota&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Missouri&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Utah&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Montana&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;New York&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Illinois&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Kansas&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Delaware&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;South Carolina&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Florida&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;North Dakota&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Tennessee&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Colorado&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Michigan&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;West Virginia&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Hawaii&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Kentucky&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Rhode Island&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Virginia&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Wisconsin&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Massachusetts&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Ohio&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Alabama&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Minnesota&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Washington&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#00efaf'>
+              <bucket>&quot;[federated.1xux7um13vf7p411v9sb40c13br8].[sum:hev_pct:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1xux7um13vf7p411v9sb40c13br8].[sum:phev_pct:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.1xux7um13vf7p411v9sb40c13br8].[sum:gasoline_pct:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1xux7um13vf7p411v9sb40c13br8].[sum:ev_pct:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+        <semantic-value key='[State].[Name]' value='%null%' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='state' />
+        <field-sort-custom-order field='ev_pct' />
+        <field-sort-custom-order field='Calculation_0943656965976064' />
+        <field-sort-custom-order field='phev_pct' />
+        <field-sort-custom-order field='hev_pct' />
+        <field-sort-custom-order field='gasoline_pct' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field='group' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='market_share' id='market!share_72987893891F4A37A1C9893646E10167'>
+            <properties context=''>
+              <relation connection='excel-direct.1qin7w906a060014djutg09ibsbm' name='market_share' table='[market_share$]' type='table'>
+                <columns gridOrigin='A1:E52:no:A1:E52:0' header='yes' outcome='6'>
+                  <column datatype='string' name='state' ordinal='0' />
+                  <column datatype='real' name='ev_pct' ordinal='1' />
+                  <column datatype='real' name='phev_pct' ordinal='2' />
+                  <column datatype='real' name='hev_pct' ordinal='3' />
+                  <column datatype='real' name='gasoline_pct' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='EV Adoption -  Large States Comparison'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Benton Sans Book' fontsize='14'>EV Adoption — Large States Comparison</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='large_states_comparison (ev_dashboard_data_1) (copy)' name='federated.0a7c2b71bmvdmr13hbs751ma1ags (copy)' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0a7c2b71bmvdmr13hbs751ma1ags (copy)'>
+            <column-instance column='[ev_pct]' derivation='Avg' name='[avg:ev_pct:qk]' pivot='key' type='quantitative' />
+            <column caption='Ev Pct' datatype='real' name='[ev_pct]' role='measure' type='quantitative' />
+            <column-instance column='[ev_pct]' derivation='None' name='[none:ev_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.0a7c2b71bmvdmr13hbs751ma1ags (copy)].[none:state:nk]' direction='DESC' using='[federated.0a7c2b71bmvdmr13hbs751ma1ags (copy)].[avg:ev_pct:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.0a7c2b71bmvdmr13hbs751ma1ags (copy)].[none:ev_pct:qk]' value='63' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0a7c2b71bmvdmr13hbs751ma1ags (copy)].[none:ev_pct:qk]' value='n#,##0.00;-#,##0.00' />
+            <format attr='height' field='[federated.0a7c2b71bmvdmr13hbs751ma1ags (copy)].[none:state:nk]' value='34' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0a7c2b71bmvdmr13hbs751ma1ags (copy)].[none:state:nk]' />
+              <text column='[federated.0a7c2b71bmvdmr13hbs751ma1ags (copy)].[none:ev_pct:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0a7c2b71bmvdmr13hbs751ma1ags (copy)].[none:ev_pct:qk]' enable-instant-analytics='true' formula='constant' id='refline0' label='National avg 1.30%' label-type='custom' scope='per-pane' value='1.3' value-column='[federated.0a7c2b71bmvdmr13hbs751ma1ags (copy)].[none:ev_pct:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0a7c2b71bmvdmr13hbs751ma1ags (copy)].[none:state:nk]</rows>
+        <cols>[federated.0a7c2b71bmvdmr13hbs751ma1ags (copy)].[none:ev_pct:qk]</cols>
+      </table>
+      <simple-id uuid='{4DE7E217-5207-4184-A065-66DD34EBD079}' />
+    </worksheet>
+    <worksheet name='EV Adoption Rate by State (%)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Benton Sans Book' fontsize='14'>EV Adoption Rate by State (%)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='market_share' name='federated.1xux7um13vf7p411v9sb40c13br8' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1xux7um13vf7p411v9sb40c13br8'>
+            <column caption='Ev Pct' datatype='real' name='[ev_pct]' role='measure' type='quantitative' />
+            <column-instance column='[ev_pct]' derivation='None' name='[none:ev_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1xux7um13vf7p411v9sb40c13br8].[Longitude (generated)]' field-type='quantitative' max='33442093.197138127' min='25632647.480996449' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1xux7um13vf7p411v9sb40c13br8].[Latitude (generated)]' field-type='quantitative' max='6314699.4009961467' min='3735920.6841246216' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.1xux7um13vf7p411v9sb40c13br8].[none:state:nk]' value='8' />
+            <format attr='text-format' field='[federated.1xux7um13vf7p411v9sb40c13br8].[none:ev_pct:qk]' value='p0%' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' center='1.3' field='[federated.1xux7um13vf7p411v9sb40c13br8].[none:ev_pct:qk]' palette='red_blue_diverging_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.1xux7um13vf7p411v9sb40c13br8].[none:ev_pct:qk]' />
+              <text column='[federated.1xux7um13vf7p411v9sb40c13br8].[none:state:nk]' />
+              <lod column='[federated.1xux7um13vf7p411v9sb40c13br8].[none:state:nk]' />
+              <geometry column='[federated.1xux7um13vf7p411v9sb40c13br8].[Geometry (generated)]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true'>State: </run>
+                <run>Æ&#10;</run>
+                <run bold='true'><![CDATA[EV Adoption: <[federated.1xux7um13vf7p411v9sb40c13br8].[none:ev_pct:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1xux7um13vf7p411v9sb40c13br8].[Latitude (generated)]</rows>
+        <cols>[federated.1xux7um13vf7p411v9sb40c13br8].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{547F6B42-8E54-48F3-A34F-861AA27BFC0D}' />
+    </worksheet>
+    <worksheet name='Priority States for EV Infrastructure Investment'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Benton Sans Book'>Priority States for EV Infrastructure Investment</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='recommendations (ev_dashboard_data_1)' name='federated.0su5e9w0rssmyq16yxnmy029v8v9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0su5e9w0rssmyq16yxnmy029v8v9'>
+            <column caption='Ev' datatype='integer' name='[ev]' role='measure' type='quantitative' />
+            <column caption='Ev Pct' datatype='real' name='[ev_pct]' role='measure' type='quantitative' />
+            <column caption='Gasoline Pct' datatype='real' name='[gasoline_pct]' role='measure' type='quantitative' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[ev]' derivation='Sum' name='[sum:ev:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ev_pct]' derivation='Sum' name='[sum:ev_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gasoline_pct]' derivation='Sum' name='[sum:gasoline_pct:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0su5e9w0rssmyq16yxnmy029v8v9].[sum:ev_pct:qk]' value='n#,##0.00;-#,##0.00' />
+            <format attr='text-format' field='[federated.0su5e9w0rssmyq16yxnmy029v8v9].[sum:ev:qk]' value='n0;-0' />
+            <format attr='text-format' field='[federated.0su5e9w0rssmyq16yxnmy029v8v9].[sum:gasoline_pct:qk]' value='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' />
+            <format attr='height' field='[federated.0su5e9w0rssmyq16yxnmy029v8v9].[none:state:nk]' value='53' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0su5e9w0rssmyq16yxnmy029v8v9].[none:state:nk]' />
+              <lod column='[federated.0su5e9w0rssmyq16yxnmy029v8v9].[sum:ev:qk]' />
+              <lod column='[federated.0su5e9w0rssmyq16yxnmy029v8v9].[sum:gasoline_pct:qk]' />
+              <text column='[federated.0su5e9w0rssmyq16yxnmy029v8v9].[sum:ev_pct:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0su5e9w0rssmyq16yxnmy029v8v9].[sum:ev_pct:qk]' enable-instant-analytics='true' formula='constant' id='refline0' label='National avg 1.30%' label-type='custom' scope='per-table' value='1.3' value-column='[federated.0su5e9w0rssmyq16yxnmy029v8v9].[sum:ev_pct:qk]' z-order='1' />
+            <customized-tooltip>
+              <formatted-text>
+                <run>State:&lt;</run>
+                <run>[federated.0su5e9w0rssmyq16yxnmy029v8v9].[none:state:nk]</run>
+                <run>&gt;&#10;EV Adoption Rate: &lt;</run>
+                <run>[federated.0su5e9w0rssmyq16yxnmy029v8v9].[sum:ev_pct:qk]</run>
+                <run>&gt;&#10;Total EVs registered: &lt;</run>
+                <run>[federated.0su5e9w0rssmyq16yxnmy029v8v9].[sum:ev:qk]</run>
+                <run>&gt;&#10;Gasoline share: &lt;</run>
+                <run>[federated.0su5e9w0rssmyq16yxnmy029v8v9].[sum:gasoline_pct:qk]</run>
+                <run>&gt;&#10;&#10;&#10;&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0su5e9w0rssmyq16yxnmy029v8v9].[none:state:nk]</rows>
+        <cols>[federated.0su5e9w0rssmyq16yxnmy029v8v9].[sum:ev_pct:qk]</cols>
+      </table>
+      <simple-id uuid='{664772FB-B45E-42FF-8AAD-6870C16AC8DA}' />
+    </worksheet>
+    <worksheet name='Top 5 vs Bottom 5 - EV Adoption'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Benton Sans Book' fontsize='14'>Top 5 vs Bottom 5 States — EV Adoption Rate (%)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='top_bottom_5_states (ev_dashboard_data_1)' name='federated.1vf49461eyw52z1ax58xv1bvc5eu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vf49461eyw52z1ax58xv1bvc5eu'>
+            <column-instance column='[ev_pct]' derivation='Avg' name='[avg:ev_pct:qk]' pivot='key' type='quantitative' />
+            <column caption='Ev Pct' datatype='real' name='[ev_pct]' role='measure' type='quantitative' />
+            <column caption='Group' datatype='string' name='[group]' role='dimension' type='nominal' />
+            <column-instance column='[ev_pct]' derivation='None' name='[none:ev_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[group]' derivation='None' name='[none:group:nk]' pivot='key' type='nominal' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1vf49461eyw52z1ax58xv1bvc5eu].[none:state:nk]' direction='DESC' using='[federated.1vf49461eyw52z1ax58xv1bvc5eu].[avg:ev_pct:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1vf49461eyw52z1ax58xv1bvc5eu].[none:ev_pct:qk]' value='n#,##0.00;-#,##0.00' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1vf49461eyw52z1ax58xv1bvc5eu].[none:group:nk]' />
+              <text column='[federated.1vf49461eyw52z1ax58xv1bvc5eu].[none:ev_pct:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.1vf49461eyw52z1ax58xv1bvc5eu].[none:ev_pct:qk]' enable-instant-analytics='true' formula='constant' id='refline0' label='National avg 1.30%' label-type='custom' scope='per-table' value='1.3' value-column='[federated.1vf49461eyw52z1ax58xv1bvc5eu].[none:ev_pct:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1vf49461eyw52z1ax58xv1bvc5eu].[none:state:nk]</rows>
+        <cols>[federated.1vf49461eyw52z1ax58xv1bvc5eu].[none:ev_pct:qk]</cols>
+      </table>
+      <simple-id uuid='{69147520-C652-4F82-B6CF-FEA07DCB2ADC}' />
+    </worksheet>
+    <worksheet name='Vehicle Fuel Type Market Share by State (%)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Benton Sans Book' fontsize='14'>Vehicle Fuel Type Market Share by State (%)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='market_share' name='federated.1xux7um13vf7p411v9sb40c13br8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1xux7um13vf7p411v9sb40c13br8'>
+            <column-instance column='[ev_pct]' derivation='Avg' name='[avg:ev_pct:qk]' pivot='key' type='quantitative' />
+            <column caption='Ev Pct' datatype='real' name='[ev_pct]' role='measure' type='quantitative' />
+            <column caption='Gasoline Pct' datatype='real' name='[gasoline_pct]' role='measure' type='quantitative' />
+            <column caption='Hev Pct' datatype='real' name='[hev_pct]' role='measure' type='quantitative' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column caption='Phev Pct' datatype='real' name='[phev_pct]' role='measure' type='quantitative' />
+            <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[ev_pct]' derivation='Sum' name='[sum:ev_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gasoline_pct]' derivation='Sum' name='[sum:gasoline_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[hev_pct]' derivation='Sum' name='[sum:hev_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[phev_pct]' derivation='Sum' name='[sum:phev_pct:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1xux7um13vf7p411v9sb40c13br8].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1xux7um13vf7p411v9sb40c13br8].[sum:phev_pct:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1xux7um13vf7p411v9sb40c13br8].[sum:ev_pct:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1xux7um13vf7p411v9sb40c13br8].[sum:hev_pct:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1xux7um13vf7p411v9sb40c13br8].[sum:gasoline_pct:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1xux7um13vf7p411v9sb40c13br8].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1xux7um13vf7p411v9sb40c13br8].[sum:phev_pct:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1xux7um13vf7p411v9sb40c13br8].[sum:ev_pct:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1xux7um13vf7p411v9sb40c13br8].[sum:hev_pct:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1xux7um13vf7p411v9sb40c13br8].[sum:gasoline_pct:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <computed-sort column='[federated.1xux7um13vf7p411v9sb40c13br8].[none:state:nk]' direction='DESC' using='[federated.1xux7um13vf7p411v9sb40c13br8].[avg:ev_pct:qk]' />
+          <slices>
+            <column>[federated.1xux7um13vf7p411v9sb40c13br8].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1xux7um13vf7p411v9sb40c13br8].[Multiple Values]' scope='cols' value='Share (%)' />
+          </style-rule>
+          <style-rule element='field-labels-spanner'>
+            <format attr='font-weight' scope='rows' value='bold' />
+            <format attr='font-size' scope='cols' value='3' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1xux7um13vf7p411v9sb40c13br8].[:Measure Names]' />
+              <lod column='[federated.1xux7um13vf7p411v9sb40c13br8].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1xux7um13vf7p411v9sb40c13br8].[none:state:nk]</rows>
+        <cols>[federated.1xux7um13vf7p411v9sb40c13br8].[Multiple Values]</cols>
+      </table>
+      <simple-id uuid='{23AE9585-0EBD-46DC-99F1-1AEDB5EF1285}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='900' maxwidth='1200' minheight='900' minwidth='1200' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98222' id='13' param='horz' type-v2='layout-flow' w='98666' x='667' y='889'>
+            <zone h='98222' id='10' param='horz' type-v2='layout-flow' w='98666' x='667' y='889'>
+              <zone h='98222' id='7' param='horz' type-v2='layout-flow' w='98666' x='667' y='889'>
+                <zone h='98222' id='5' type-v2='layout-basic' w='98666' x='667' y='889'>
+                  <zone h='52777' id='3' name='EV Adoption Rate by State (%)' w='98666' x='667' y='889'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='45445' id='8' name='Top 5 vs Bottom 5 - EV Adoption' w='49332' x='667' y='53666'>
+                    <zone-style>
+                      <format attr='border-color' value='#4e79a7' />
+                      <format attr='border-style' value='solid' />
+                      <format attr='border-width' value='1' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='45445' id='11' name='EV Adoption -  Large States Comparison' w='49334' x='49999' y='53666'>
+                    <zone-style>
+                      <format attr='border-color' value='#4e79a7' />
+                      <format attr='border-style' value='solid' />
+                      <format attr='border-width' value='1' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='900' minheight='900' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='21' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98222' id='20' param='vert' type-v2='layout-flow' w='98666' x='667' y='889'>
+                <zone fixed-size='280' h='52777' id='3' is-fixed='true' name='EV Adoption Rate by State (%)' w='98666' x='667' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='45445' id='8' is-fixed='true' name='Top 5 vs Bottom 5 - EV Adoption' w='49332' x='667' y='53666'>
+                  <zone-style>
+                    <format attr='border-color' value='#4e79a7' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='45445' id='11' is-fixed='true' name='EV Adoption -  Large States Comparison' w='49334' x='49999' y='53666'>
+                  <zone-style>
+                    <format attr='border-color' value='#4e79a7' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{9DBCF88A-8C94-41B6-AC30-C753F2E43A42}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 2'>
+      <style />
+      <size maxheight='900' maxwidth='1200' minheight='900' minwidth='1200' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98222' id='7' param='horz' type-v2='layout-flow' w='98666' x='667' y='889'>
+            <zone h='98222' id='5' type-v2='layout-basic' w='89916' x='667' y='889'>
+              <zone h='98222' id='3' name='Vehicle Fuel Type Market Share by State (%)' w='89916' x='667' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='105' h='98222' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='8750' x='90583' y='889'>
+              <zone h='12667' id='8' name='Vehicle Fuel Type Market Share by State (%)' pane-specification-id='4' param='[federated.1xux7um13vf7p411v9sb40c13br8].[:Measure Names]' type-v2='color' w='8750' x='90583' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='16' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98222' id='15' param='vert' type-v2='layout-flow' w='98666' x='667' y='889'>
+                <zone fixed-size='280' h='98222' id='3' is-fixed='true' name='Vehicle Fuel Type Market Share by State (%)' w='89916' x='667' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='12667' id='8' name='Vehicle Fuel Type Market Share by State (%)' pane-specification-id='4' param='[federated.1xux7um13vf7p411v9sb40c13br8].[:Measure Names]' type-v2='color' w='8750' x='90583' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{F98C2B70-E1D9-41D3-91D8-D80B0C1F7B8F}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Recommendations'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='20'>Recommendatio</run>
+            <run bold='true' fontalignment='1'>ns</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='dash-text'>
+          <format attr='wrap' id='dash-text_12' value='on' />
+        </style-rule>
+      </style>
+      <size maxheight='900' maxwidth='1200' minheight='900' minwidth='1200' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98222' id='14' param='vert' type-v2='layout-flow' w='98666' x='667' y='889'>
+            <zone h='5889' id='15' type-v2='title' w='98666' x='667' y='889'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='92333' id='7' param='horz' type-v2='layout-flow' w='98666' x='667' y='6778'>
+              <zone h='92333' id='5' type-v2='layout-basic' w='95999' x='667' y='6778'>
+                <zone h='92333' id='11' name='Priority States for EV Infrastructure Investment' w='95999' x='667' y='6778'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone fixed-size='32' h='92333' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='2667' x='96666' y='6778' />
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='56778' id='12' type-v2='text' w='91833' x='2000' y='38667'>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Benton Sans Book' fontsize='14'>Why These 3 States?</run>
+            <run>Æ&#10;&#10;</run>
+            <run fontcolor='#14181f' fontname='Courier New' fontsize='12'>Florida, Texas, and New York represent the highest-priority states for EV infrastructure investment based on two key factors: high absolute EV registrations combined with below-average adoption rates compared to the national average (1.30%).</run>
+            <run>Æ&#10;&#10;</run>
+            <run fontcolor='#14181f' fontname='Courier New' fontsize='12'>🔵 </run>
+            <run bold='true' fontcolor='#14181f' fontname='Courier New' fontsize='12'>Florida</run>
+            <run fontcolor='#14181f' fontname='Courier New' fontsize='12'> — </run>
+            <run bold='true' fontcolor='#14181f' fontname='Courier New' fontsize='12'>254,900 EVs | 1.37% adoption</run>
+            <run fontcolor='#14181f' fontname='Courier New' fontsize='12'>Æ </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#14181f' fontname='Courier New' fontsize='12'>Despite being the 3rd largest EV market by volume, Florida&apos;s adoption rate barely exceeds the national average. Its large population and sunny climate make it ideal for accelerated EV growth with the right infrastructure support.</run>
+            <run>Æ&#10;&#10;</run>
+            <run fontcolor='#14181f' fontname='Courier New' fontsize='12'>🔵 </run>
+            <run bold='true' fontcolor='#14181f' fontname='Courier New' fontsize='12'>Texas</run>
+            <run fontcolor='#14181f' fontname='Courier New' fontsize='12'> — </run>
+            <run bold='true' fontcolor='#14181f' fontname='Courier New' fontsize='12'>230,100 EVs | 0.89% adoption</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#14181f' fontname='Courier New' fontsize='12'>The largest infrastructure gap in the country. Texas has the 2nd highest EV count nationally but its adoption rate is 32% below the national average — a clear sign that charging infrastructure is not keeping pace with demand.</run>
+            <run>Æ&#10;&#10;</run>
+            <run fontcolor='#14181f' fontname='Courier New' fontsize='12'>🔵 </run>
+            <run bold='true' fontcolor='#14181f' fontname='Courier New' fontsize='12'>New York</run>
+            <run fontcolor='#14181f' fontname='Courier New' fontsize='12'> — </run>
+            <run bold='true' fontcolor='#14181f' fontname='Courier New' fontsize='12'>131,300 EVs | 1.16% adoption</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#14181f' fontname='Courier New' fontsize='12'>Dense urban corridors and high commuter traffic make New York a high-impact investment target. Closing the gap to California levels could add hundreds of thousands of EV users.</run>
+          </formatted-text>
+          <zone-style>
+            <format attr='border-color' value='#4e79a7' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontsize='20'>Recommendatio</run>
+                <run bold='true' fontalignment='1'>ns</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='23' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98222' id='22' param='vert' type-v2='layout-flow' w='98666' x='667' y='889'>
+                <zone h='5889' id='15' type-v2='title' w='98666' x='667' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='92333' id='11' is-fixed='true' name='Priority States for EV Infrastructure Investment' w='95999' x='667' y='6778'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='56778' id='12' type-v2='text' w='91833' x='2000' y='38667'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#000000' fontname='Benton Sans Book' fontsize='14'>Why These 3 States?</run>
+                    <run>Æ&#10;&#10;</run>
+                    <run fontcolor='#14181f' fontname='Courier New' fontsize='12'>Florida, Texas, and New York represent the highest-priority states for EV infrastructure investment based on two key factors: high absolute EV registrations combined with below-average adoption rates compared to the national average (1.30%).</run>
+                    <run>Æ&#10;&#10;</run>
+                    <run fontcolor='#14181f' fontname='Courier New' fontsize='12'>🔵 </run>
+                    <run bold='true' fontcolor='#14181f' fontname='Courier New' fontsize='12'>Florida</run>
+                    <run fontcolor='#14181f' fontname='Courier New' fontsize='12'> — </run>
+                    <run bold='true' fontcolor='#14181f' fontname='Courier New' fontsize='12'>254,900 EVs | 1.37% adoption</run>
+                    <run fontcolor='#14181f' fontname='Courier New' fontsize='12'>Æ </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#14181f' fontname='Courier New' fontsize='12'>Despite being the 3rd largest EV market by volume, Florida&apos;s adoption rate barely exceeds the national average. Its large population and sunny climate make it ideal for accelerated EV growth with the right infrastructure support.</run>
+                    <run>Æ&#10;&#10;</run>
+                    <run fontcolor='#14181f' fontname='Courier New' fontsize='12'>🔵 </run>
+                    <run bold='true' fontcolor='#14181f' fontname='Courier New' fontsize='12'>Texas</run>
+                    <run fontcolor='#14181f' fontname='Courier New' fontsize='12'> — </run>
+                    <run bold='true' fontcolor='#14181f' fontname='Courier New' fontsize='12'>230,100 EVs | 0.89% adoption</run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#14181f' fontname='Courier New' fontsize='12'>The largest infrastructure gap in the country. Texas has the 2nd highest EV count nationally but its adoption rate is 32% below the national average — a clear sign that charging infrastructure is not keeping pace with demand.</run>
+                    <run>Æ&#10;&#10;</run>
+                    <run fontcolor='#14181f' fontname='Courier New' fontsize='12'>🔵 </run>
+                    <run bold='true' fontcolor='#14181f' fontname='Courier New' fontsize='12'>New York</run>
+                    <run fontcolor='#14181f' fontname='Courier New' fontsize='12'> — </run>
+                    <run bold='true' fontcolor='#14181f' fontname='Courier New' fontsize='12'>131,300 EVs | 1.16% adoption</run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#14181f' fontname='Courier New' fontsize='12'>Dense urban corridors and high commuter traffic make New York a high-impact investment target. Closing the gap to California levels could add hundreds of thousands of EV users.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#4e79a7' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{547A143A-F3D2-4280-B926-05DF1DBFEC1E}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='115'>
+    <window class='worksheet' name='EV Adoption Rate by State (%)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='89'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1xux7um13vf7p411v9sb40c13br8].[none:ev_pct:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{36788C09-E886-4FF7-A65C-C3FBF7F21B71}' />
+    </window>
+    <window class='worksheet' name='Top 5 vs Bottom 5 - EV Adoption'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1vf49461eyw52z1ax58xv1bvc5eu].[none:group:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6337D79C-3501-4BE0-BD40-C29CF5CC624A}' />
+    </window>
+    <window class='worksheet' name='EV Adoption -  Large States Comparison'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='4' param='[federated.0a7c2b71bmvdmr13hbs751ma1ags (copy)].[none:state:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4BA59A79-F08E-4103-BF65-5E833E62F7E8}' />
+    </window>
+    <window class='worksheet' name='Vehicle Fuel Type Market Share by State (%)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='4' param='[federated.1xux7um13vf7p411v9sb40c13br8].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CF74C45A-8C0B-46CE-8AC4-88AA85545600}' />
+    </window>
+    <window class='worksheet' name='Priority States for EV Infrastructure Investment'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0su5e9w0rssmyq16yxnmy029v8v9].[none:state:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2612A2DA-D9FC-455F-8B02-60FB3B13B876}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='EV Adoption -  Large States Comparison' />
+        <viewpoint name='EV Adoption Rate by State (%)'>
+          <zoom type='entire-view' />
+          <default-map-tool-selection tool='1' />
+        </viewpoint>
+        <viewpoint name='Top 5 vs Bottom 5 - EV Adoption' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{0A4A5171-90E0-4DC8-9E64-892F4F1D11E7}' />
+    </window>
+    <window class='dashboard' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='Vehicle Fuel Type Market Share by State (%)' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{B324BF3A-506B-4C95-9538-306976155BA1}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Recommendations'>
+      <viewpoints>
+        <viewpoint name='Priority States for EV Infrastructure Investment' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{A235A94F-8440-4C41-8726-CFF6E60A3814}' />
+    </window>
+  </windows>
+</workbook>
